@@ -6,6 +6,9 @@
 
 <br />
 <div align="center">
+  <a href="https://github.com/github_username/repo_name">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1024px-Java_programming_language_logo.svg.png" alt="Logo" width="80" height="80">
+  </a>
 <h3 align="center">Predicting a heart disease using clinical attributes</h3>
   <p align="center">
     This repository contains a Java wrapper where a heart disease can be predicted, using clinical attributes.
