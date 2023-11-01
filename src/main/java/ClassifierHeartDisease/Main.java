@@ -7,6 +7,7 @@ public class Main {
         try {
             starter.initialize(args);
             System.out.println("Starting Classifier Application...");
+            // starting
             Controlling controlling = new Controlling(starter);
         } catch (Exception e) {
             System.out.println((String.format("(Line %d) %s: %s",
