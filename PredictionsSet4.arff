@@ -1,0 +1,20 @@
+@relation '01-Clean_dataset-weka.filters.unsupervised.attribute.Remove-R5,7'
+
+@attribute Age numeric
+@attribute Sex {Male,Female}
+@attribute Chest.pain.type {Asymptomatic,'Non-anginal pain (pain without disease)','Atypical angina','Typical angina'}
+@attribute BP numeric
+@attribute FBS.over.120 {FALSE,TRUE}
+@attribute Max.HR numeric
+@attribute Exercise.angina {No,Yes}
+@attribute ST.depression numeric
+@attribute Slope.of.ST {Flat,'Up sloping','Down sloping'}
+@attribute Number.of.vessels.fluro numeric
+@attribute Thallium {Normal,'Reversible defect','Fixed defect'}
+@attribute Heart.Disease {Absence,Presence}
+
+@data
+70,Male,Asymptomatic,130,FALSE,109,No,2.4,Flat,3,Normal,Absence
+67,Female,'Non-anginal pain (pain without disease)',115,FALSE,160,No,1.6,Flat,0,'Reversible defect',Presence
+57,Male,'Atypical angina',124,FALSE,141,No,0.3,'Up sloping',0,'Reversible defect',Presence
+64,Male,Asymptomatic,128,FALSE,105,Yes,0.2,Flat,1,'Reversible defect',Absence
