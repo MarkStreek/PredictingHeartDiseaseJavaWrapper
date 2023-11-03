@@ -40,26 +40,81 @@
 
 ## About The Project
 
-Needs be added...
+In this repository, you can find a project about predicting a heart disease. The predicting is done by a created machine learning model. In this project, the creation of the model is not being handeled. This is done in a earlier [project](https://github.com/MarkStreek/Heart-disease-ML).
+
+The application that predicts the disease was build in Java using the [Java Weka API](https://weka.sourceforge.io/doc.stable/). The user can give up a input file and select the requested output. Without defining a output option, the classified instances are being printed to the console.
+
+application options
+
+- -f,--filename: Name of input file
+- -w,--writingOut: Name of the output file
+- -a,--areaUnderAOC: Get the area under AOC (only available when classlabels are given)
+- -m,--confusionMatrix: Show the confustion Matrix of the predictions (only available when classlabels are given)
+
+Project structure:
+
+<pre>
+├── gradlew
+├── gradlew.bat
+├── settings.gradle
+└── src
+   └── main
+       ├── java
+       │   └── ClassifierHeartDisease
+       │       ├── AreaUnderAOC.java
+       │       ├── Classify.java
+       │       ├── CommandLineParsing.java
+       │       ├── ConfusionMatrix.java
+       │       ├── Controlling.java
+       │       ├── LoadingModelData.java
+       │       ├── LoadingUserData.java
+       │       ├── Main.java
+       │       ├── UserFeedback.java
+       │       └── WritingOutput.java
+       └── resources
+           └── Stacking_Heart_Disease_Model.model
+</pre>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Installation
 
-1. Installation of the project
+First of all, this project must be downloaded and needs to be unpacked. After the project lives inside a directory, the folowing steps must be complete for a smooth run:
+
+1. Java must be installed on the system you're using!
+2. There MUST be a file called: '**BFVPredictingHeartDisease1.0.jar**'
+3. An input file with data is needed. This file must be a .arff file
+
+> Inside this project there is a file called **template.arff**. Inside this file, the user can classify up to a single instance. This is placed inside a file, because otherwise the user needs to declare 11 attributes variabels via the commandline. *Open this file with an editor (for example: notepad) and follow the instructions in this file.*
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Usage
 
-Below is a usage
+After the important steps are completed, you can now run the program. Because it's a java program, you have to start with calling java. You can call the help of the program, simply by calling the program without any options.
+
+Open a new terminal inside this directory (or on mac: open a new terminal and navigate to this directory with *cd*). Type the following command to get the help:
+
+```bash
+java -jar BFVPredictingHeartDisease1.0.jar
+```
+
+You can now read the help. For example, if you want to make a prediction based on your own .arff file and write the output to a new .arff file, the following command can be used (your file must be in the same directory as the project):
+
+```bash
+java -jar BFVPredictingHeartDisease1.0.jar -f yourOwnFileName.arff -w yourOwnOutputFileName
+```
+
+The options for the confusion matrix and area under the curve, only can be used, when the class labels are given. For example, you can use these options to train new data. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Contact
+
+In case of trouble, please contact the owner of the project:
 
 Mark van de Streek - [@mail](mailto:m.van.de.streek@st.hanze.nl) - m.van.de.streek@st.hanze.nl
 
