@@ -2,9 +2,7 @@ package ClassifierHeartDisease;
 
 import weka.core.Attribute;
 import weka.core.Instances;
-import weka.core.converters.CSVLoader;
 import weka.core.converters.ConverterUtils;
-import weka.gui.beans.DataSource;
 
 import java.io.File;
 import java.util.List;

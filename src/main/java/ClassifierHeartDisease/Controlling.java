@@ -3,12 +3,14 @@ package ClassifierHeartDisease;
 import weka.classifiers.Classifier;
 import weka.core.Instances;
 
+
 public class Controlling {
     private final CommandLineParsing starter;
     private Classifier model;
     private Instances data;
     private Instances predictions;
     private boolean labelsGiven;
+
 
     public Controlling(CommandLineParsing starter) {
         // Storing CL arguments
@@ -42,11 +44,11 @@ public class Controlling {
         if (this.starter.isConfusionMatrix()) {
             // Only when the class labels are given, the confusion matrix can be constructed
             if (!this.labelsGiven) {
-                System.out.println("User didn't provide labels at input");
+                throw new IllegalArgumentException("User didn't provide labels at input");
             } else System.out.println(new ConfusionMatrix().getFeedback(this.predictions, this.data));}
         if (this.starter.isAreaUnderAOC()) {
             if (!this.labelsGiven) {
-                System.out.println("User didn't provide labels at input");
+                throw new IllegalArgumentException("User didn't provide labels at input");
             } else System.out.println(new AreaUnderAOC(this.model).getFeedback(this.data, this.predictions));}
         if (this.starter.isWritingOut()) {
             WritingOutput writingOutput = new WritingOutput(this.starter);

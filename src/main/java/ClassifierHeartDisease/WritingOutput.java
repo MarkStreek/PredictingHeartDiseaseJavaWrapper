@@ -29,9 +29,8 @@ public class WritingOutput implements UserFeedback{
             myWriter.write(String.valueOf(predictions));
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
-
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            throw new RuntimeException("Error writing output to a file:");
         }
     }
 }
