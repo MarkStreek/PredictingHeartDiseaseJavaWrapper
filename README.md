@@ -44,7 +44,7 @@ In this repository, you can find a project about predicting a heart disease. The
 
 The application that predicts the disease was build in Java using the [Java Weka API](https://weka.sourceforge.io/doc.stable/). The user can give up a input file and select the requested output. Without defining a output option, the classified instances are being printed to the console.
 
-application options
+Application options
 
 - -f,--filename: Name of input file
 - -w,--writingOut: Name of the output file
